@@ -1,0 +1,46 @@
+[user]
+	email = winckell.benjamin.isart@gmail.com
+	name = ben
+[color]
+# Enable colors in color-supporting terminals
+    ui = auto
+[push]
+	default = upstream
+[tag]
+# Sort tags as version numbers whenever applicable, so 1.10.2 is AFTER 1.2.0.
+    sort = version:refname
+[versionsort]
+    prereleaseSuffix = -pre
+    prereleaseSuffix = .pre
+    prereleaseSuffix = -beta
+    prereleaseSuffix = .beta
+    prereleaseSuffix = -rc
+    prereleaseSuffix = .rc
+[push]
+# Default push should only push the current branch to its push target, regardless of its remote name
+    default = upstream
+# When pushing, also push tags whose commit-ishs are now reachable upstream
+    followTags = true
+[pull]
+# This is GREAT… when you know what you're doing and are careful
+# not to pull --no-rebase over a local line containing a true merge.
+# rebase = true
+# WARNING! This option, which does away with the one gotcha of
+# auto-rebasing on pulls, is only available from 1.8.5 onwards.
+    rebase = preserve
+
+[diff]
+# Use better, descriptive initials (c, i, w) instead of a/b.
+    mnemonicPrefix = true
+# Show renames/moves as such
+    renames = true
+# When using --word-diff, assume --word-diff-regex=.
+    wordRegex = .
+[core]
+    whitespace = -trailing-space
+	editor = nano
+[log]
+# Use abbrev SHAs whenever possible/relevant instead of full 40 chars
+    abbrevCommit = true
+# Automatically --follow when given a single path
+    follow = true
