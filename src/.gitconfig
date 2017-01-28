@@ -1,6 +1,4 @@
-[user]
-	email = winckell.benjamin.isart@gmail.com
-	name = ben
+
 [color]
 # Enable colors in color-supporting terminals
     ui = auto
