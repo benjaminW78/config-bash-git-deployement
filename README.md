@@ -16,10 +16,10 @@
 
 ## **Requirement**
 
-*You must have installed NODEJS* with :
+*You must have installed NODEJS* :
  - [use NVM](https://github.com/creationix/nvm#install-script)
 
-*You must run this import on linux os*
+*ONLY tested on linux os*
 
 ## **Files tree**
 ```
