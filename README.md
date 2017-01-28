@@ -11,9 +11,7 @@
  - **[Third step](#third-step)**
  - **[Fourth step](#fourth-step)**
 - **[API documentation](#api-documentation)**
-- **[Example](#example)**
 - **[Acknowledgement](#acknowledgement)**
-- **[Other project](#other-project)**
 
 
 ## **Requirement**
@@ -133,3 +131,10 @@ alias gog="git log --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgree
 `gog` alias return inside git repository :
 
 ![./imgs/screenshot2.png](./imgs/screenshot2.png)
+
+## Acknowledgement
+
+thanks to [Maxime Bréhin](https://twitter.com/mbrehin) from [Delicious insights](http://delicious-insights.com/) for the perfect git formation which cover everything i needed to know about git!
+And for the knowledge provided on scripting.
+
+thanks to [Companeo](http://www.companeo.com/) for sending me to Delicious insights git formation.
