@@ -5,6 +5,7 @@ const readline = require('readline'),
         prompt: 'OHAI> aaaa '
     }),
     fse = require('fs-extra'),
+    concat = require('concat-files'),
     fs = require('fs');
 
 var gitUser = {
@@ -75,7 +76,21 @@ function moveFiles(){
       // tried fse.rename, then falls back to using nfse.copy to copy the dir
       // to dest and then rimraf to remove the source dir
         if(err===null){
-            editGitConf();
+            concat(
+                [
+                    process.env.HOME+'/.bashrc.before.config.deployement.backup',
+                    __dirname+'/separatorConfigTemplate',
+                    process.env.HOME+'/.bashrc'
+                ],
+                process.env.HOME+'/.bashrc',
+                function(err){
+                    if(!err){
+                        editGitConf();
+                    }else{
+                        console.log('erreur au concat .bashrc');
+                        rl.close();
+                    }
+            });
         }else {
             console.log('une erreur c\'est produite\n',err);
         }
