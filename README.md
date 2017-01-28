@@ -55,30 +55,30 @@ Now let just start import of this new configuration inside our `home`.
     $ npm run start
 ```
 
-### First step:
+#### *First step*:
 It will ask you to provide a name for git to be able to commit.
 
 ```bash
-Merci de remplir votre nom d'utilisateur git: <votre réponse ici>
+# Merci de remplir votre nom d'utilisateur git: <votre réponse ici>
 ```
 
-### Second step:
+#### *Second step*:
 It ask for your email now.
 
 ```bash
-merci de remplir votre email : <votre email ici>
+# merci de remplir votre email : <votre email ici>
 ```
 
-### Third step:
+#### *Third step*:
 We save the original `.bashrc` and `.gitconfig` under those names :
 
 ```bash
-réation d'un backup de /home/ben/.bashrc ------------> /home/ben/.bashrc.before.config.deployement.backup
+# création dun backup de /home/ben/.bashrc ------------> /home/ben/.bashrc.before.config.deployement.backup
 
-création d'un backup de /home/ben/.gitconfig ------------> /home/ben/.gitconfig.before.config.deployement.backup
+# création d'un backup de /home/ben/.gitconfig ------------> /home/ben/.gitconfig.before.config.deployement.backup
 ```
 
-### Fourth step:
+#### *Fourth step*:
 We merge your `.bashrc` backup and our new `.bashrc` config and we add a split between.
 
 ```bash
