@@ -1,19 +1,18 @@
 # config-bash-git-deployement
 
 ### Table of Contents
-**[Requirement](#requirement)**
-**[Files tree](#files-tree)**
-**[Installation](#installation)**
-**[Deployement :](#deployement)**
- * **[First step](#first-step)**
- * **[Second step](#second-step)**
- * **[Third step](#third-step)**
- * **[Fourth step](#fourth-step)**
-
-**[API documentation](#api-documentation)**
-**[Example](#example)**
-**[Acknowledgement](#acknowledgement)**
-**[Other project](#other-project)**
+- **[Requirement](#requirement)**
+- **[Files tree](#files-tree)**
+- **[Installation](#installation)**
+- **[Deployement :](#deployement)**
+ - **[First step](#first-step)**
+ - **[Second step](#second-step)**
+ - **[Third step](#third-step)**
+ - **[Fourth step](#fourth-step)**
+- **[API documentation](#api-documentation)**
+- **[Example](#example)**
+- **[Acknowledgement](#acknowledgement)**
+- **[Other project](#other-project)**
 
 
 ## **Requirement**
