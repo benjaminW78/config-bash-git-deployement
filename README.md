@@ -47,9 +47,9 @@ this repository is usefull to deploy a basic configuration for git and bash term
 It will duplicate files from inside `src/` and apply them on the user home `~/`.
 You will have to provide a git user name and a email adress for the git configuration.
 
-This repository will provide you with alias and git autocompletions and terminal coloration if you are in a git repository : 
+This repository will provide you with alias and git autocompletions and terminal coloration if you are in a git repository :
 
-[screenshot.png](./screenshot.png)
+![imgs/screenshot.png](./imgs/screenshot.png)
 
 ## **Installation**
 Just run the cmd bellow to init the project.
@@ -132,4 +132,4 @@ alias gog="git log --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgree
 
 `gog` alias return inside git repository :
 
-[screenshot2.png](./screenshot2.png)
+![./imgs/screenshot2.png](./imgs/screenshot2.png)
