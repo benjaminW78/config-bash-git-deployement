@@ -5,11 +5,11 @@ if [ ! -z "$PS1" ]; then
     fi
 fi
 
-# Global aliases
+# Global aliases containing every alias available
 if [ -r ~/.bashrc.d/bashrc_aliases ]; then
         source ~/.bashrc.d/bashrc_aliases
 fi
-
+# Import git completion
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git.d/.git-completion.bash
 fi
