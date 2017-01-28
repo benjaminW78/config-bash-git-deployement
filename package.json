@@ -1,0 +1,22 @@
+{
+  "name": "config-bash-git-deployement",
+  "version": "1.0.0",
+  "description": "set bash and git config for a local user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminW78/config-bash-git-deployement.git"
+  },
+  "author": "benjaminW78",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminW78/config-bash-git-deployement/issues"
+  },
+  "homepage": "https://github.com/benjaminW78/config-bash-git-deployement#readme",
+  "dependencies": {
+    "fs-extra": "2.0.0"
+  }
+}
