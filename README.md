@@ -1,22 +1,27 @@
 # config-bash-git-deployement
 
 ### Table of Contents
-**[Practical information](#practical-information)**  
+**[Requirement](#requirement)**  
 **[Files tree](#files-tree)**  
 **[Installation](#installation)**  
-**[Deployement](#deployement)**  
+**[Deployement :](#deployement)** 
+ * **[First step](#first-step)**
+ * **[Second step](#second-step)**
+ * **[Third step](#third-step)**
+ * **[Fourth step](#fourth-step)** 
+ 
 **[API documentation](#api-documentation)**  
 **[Example](#example)**  
 **[Acknowledgement](#acknowledgement)**  
 **[Other project](#other-project)** 
 
 
-## **Practical information** 
+## **Requirement** 
 
- *You must have installed NODEJS* with :  
+*You must have installed NODEJS* with :  
  - [use NVM](https://github.com/creationix/nvm#install-script)
 
- *You must run this import on linux os*
+*You must run this import on linux os*
    
 ## **Files tree** 
 ```
@@ -38,35 +43,35 @@
 ```
 
 ## **Installation** 
-    Just run the cmd bellow to init the project.
+Just run the cmd bellow to init the project.
 
 ```bash
     $ npm install 
   
 ```
 ## **Deployement**
-    Now let just start import of this new configuration inside our `home`.
+Now let just start import of this new configuration inside our `home`.
 
 ```bash
     $ npm run start 
 ```
 
 ### First step:
-    It will ask you to provide a name for git to be able to commit.
+It will ask you to provide a name for git to be able to commit.
 
 ```bash
 Merci de remplir votre nom d'utilisateur git: <votre réponse ici>
 ```
 
 ### Second step:
-    It ask for your email now.
+It ask for your email now.
 
 ```bash
 merci de remplir votre email : <votre email ici>
 ```
 
 ### Third step:
-    We save the original `.bashrc` and `.gitconfig` under those names :
+We save the original `.bashrc` and `.gitconfig` under those names :
 
 ```bash
 réation d'un backup de /home/ben/.bashrc ------------> /home/ben/.bashrc.before.config.deployement.backup
@@ -75,7 +80,7 @@ création d'un backup de /home/ben/.gitconfig ------------> /home/ben/.gitconfig
 ```
 
 ### Fourth step:
-    We merge your `.bashrc` backup and our new `.bashrc` config and we add a split between.
+We merge your `.bashrc` backup and our new `.bashrc` config and we add a split between.
 
 ```bash
 
