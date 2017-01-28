@@ -54,7 +54,7 @@ function promptInitGit(){
 }
 
 function moveFiles(){
-    if(!fse.existsSync(process.env.HOME+'/.bashrc.config.deployement.backup') && fse.existsSync(process.env.HOME+'/.bashrc')){
+    if(!fse.existsSync(process.env.HOME+'/.bashrc.before.config.deployement.backup') && fse.existsSync(process.env.HOME+'/.bashrc')){
         fse.copy(process.env.HOME+'/.bashrc',process.env.HOME+'/.bashrc.before.config.deployement.backup',function(err){
             if(err===null){
                 console.log('création d\'un backup de '+process.env.HOME+'/.bashrc ------------> '+process.env.HOME+'/.bashrc.before.config.deployement.backup\n');
@@ -62,7 +62,7 @@ function moveFiles(){
                 console.log('une erreur c\'est produite\n',err);
             }
         });
-        fse.copy(process.env.HOME+'/.gitconfig',process.env.HOME+'/.gitconfig.before.deployement.backup',function(err){
+        fse.copy(process.env.HOME+'/.gitconfig',process.env.HOME+'/.gitconfig.before.config.deployement.backup',function(err){
             if(err===null){
                 console.log('création d\'un backup de '+process.env.HOME+'/.gitconfig ------------> '+process.env.HOME+'/.gitconfig.before.config.deployement.backup \n');
             }else{
@@ -108,12 +108,11 @@ function editGitConf(){
         if (err){
             console.log('une erreur c\'est produite\n',err);
         }else{
-            console.log('Ajout des identifiant name : ' +gitUser.name +', email : '+ gitUser.email +' dans .gitconfig \n');
+            console.log('Ajout des identifiants name : ' +gitUser.name +', email : '+ gitUser.email +' dans '+ process.env.HOME +'/.gitconfig \n');
         }
         rl.close();
     });
 }
-
 rl.question('Merci de remplir votre nom d\'utilisateur git: ', gitUserName);
 
 rl.on('close', () => {
