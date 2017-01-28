@@ -9,13 +9,17 @@ const readline = require('readline'),
     concat = require('concat-files'),
     fs = require('fs');
 
-var gitUser = {
+let gitUser = {
     name:null,
     email:null
 };
 
 rl.prompt();
-
+/**
+ * Function callback called for saving a git name
+ * @param  {string} answer result from input stdin
+ * @return {null}
+ */
 function gitUserName(answer){
     if(answer !== '' && answer !== undefined && answer !== null){
         gitUser.name = answer;
@@ -34,7 +38,11 @@ function gitUserName(answer){
         rl.question('Merci de renseigner une réponse valide: ',gitUserName);
     }
 }
-
+/**
+ * Function callback called for saving a git email
+ * @param  {string} answer result from input stdin
+ * @return {null}
+ */
 function gitUserEmail(answer){
     var regexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
         reg = new RegExp(regexp);
@@ -46,14 +54,22 @@ function gitUserEmail(answer){
         rl.question('Merci de renseigner un email Valide : ', gitUserEmail);
     }
 }
-
+/**
+ * function which onlu render text and call moveFiles
+ * @return {null}
+ */
 function promptInitGit(){
     console.log('Merci pour votre participation '+ gitUser.name);
     console.log('initialisation du git config...');
     console.log('...');
     moveFiles();
 }
-
+/**
+ * function who move files from src to current linux ~/ home
+ * and backup old bashrc and old gitconf.
+ * after that we merge the backup bashrc and the new bashrc
+ * @return {null}
+ */
 function moveFiles(){
     if(!fse.existsSync(process.env.HOME+'/.bashrc.before.config.deployement.backup') && fse.existsSync(process.env.HOME+'/.bashrc')){
         fse.copy(process.env.HOME+'/.bashrc',process.env.HOME+'/.bashrc.before.config.deployement.backup',function(err){
@@ -97,15 +113,18 @@ function moveFiles(){
         }
     });
 }
-
+/**
+ * function which append to new gitconfig the user and email.
+ * @return {null}
+ */
 function editGitConf(){
-    var test = '[user]\n    name = '+gitUser.name + "\n    email = "+gitUser.email+'\n';
+    let test = '[user]\n    name = '+gitUser.name + "\n    email = "+gitUser.email+'\n';
     // done. it first created all the necessary directories, and then
     // tried fse.rename, then falls back to using nfse.copy to copy the dir
     // to dest and then rimraf to remove the source dir
     console.log('..\n....\n......\n........\nImport de la nouvelle config bash/git DONE\n');
 
-    fs.appendFile(process.env.HOME+'/.gitconfig',test,encoding='utf8',function (err) {
+    fs.appendFile(process.env.HOME+'/.gitconfig',test,'utf8',function (err) {
         if (err){
             console.log('une erreur c\'est produite\n',err);
         }else{
@@ -114,6 +133,7 @@ function editGitConf(){
         rl.close();
     });
 }
+
 rl.question('Merci de remplir votre nom d\'utilisateur git: ', gitUserName);
 
 rl.on('close', () => {
