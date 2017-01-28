@@ -1,3 +1,4 @@
+'use strict';
 const readline = require('readline'),
     rl = readline.createInterface({
         input: process.stdin,
