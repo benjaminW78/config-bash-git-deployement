@@ -10,6 +10,6 @@ if [ -r ~/.bashrc.d/bashrc_aliases ]; then
         source ~/.bashrc.d/bashrc_aliases
 fi
 # Import git completion
-if [ -f ~/.git-completion.bash ]; then
+if [ -f ~/.git.d/.git-completion.bash ]; then
   . ~/.git.d/.git-completion.bash
 fi
